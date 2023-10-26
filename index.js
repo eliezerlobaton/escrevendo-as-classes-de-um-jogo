@@ -9,34 +9,39 @@ class Hero {
     let ataque;
     switch (this.tipo) {
       case 'mago':
-        ataque = 'usou magia';
+        ataque = 'magia';
         break;
       case 'guerreiro':
-        ataque = 'usou espada';
+        ataque = 'uma espada';
         break;
       case 'monge':
-        ataque = 'usou artes marciais';
+        ataque = 'artes marciais';
         break;
       case 'ninja':
-        ataque = 'usou shuriken';
+        ataque = 'um shuriken';
         break;
       default:
-        ataque = 'usou um ataque misterioso';
+        ataque = 'um ataque misterioso';
     }
-    return `O ${this.tipo} atacou usando ${ataque}`;
+    return `O ${this.tipo} ${this.nome} atacou usando ${ataque}`;
   }
 }
 
-function atacar() {
-  const nome = document.getElementById('hero-name').value;
-  const idade = document.getElementById('hero-age').value;
-  const tipo = document.getElementById('hero-type').value;
+function lutar() {
+  const nomeHero1 = document.getElementById('hero1-name').value;
+  const idadeHero1 = document.getElementById('hero1-age').value;
+  const tipoHero1 = document.getElementById('hero1-type').value;
 
-  const hero = new Hero(nome, idade, tipo);
-  const resultado = hero.atacar();
+  const nomeHero2 = document.getElementById('hero2-name').value;
+  const idadeHero2 = document.getElementById('hero2-age').value;
+  const tipoHero2 = document.getElementById('hero2-type').value;
+
+  const hero1 = new Hero(nomeHero1, idadeHero1, tipoHero1);
+  const hero2 = new Hero(nomeHero2, idadeHero2, tipoHero2);
+
+  const resultadoHero1 = hero1.atacar();
+  const resultadoHero2 = hero2.atacar();
 
   const output = document.getElementById('output');
-  output.textContent = resultado;
+  output.innerHTML = `<p>${resultadoHero1}</p><p>${resultadoHero2}</p>`;
 }
-
-
