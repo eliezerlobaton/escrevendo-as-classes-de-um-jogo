@@ -1,0 +1,8 @@
+{
+  "name": "escrevendo-as-classes-de-um-jogo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/eliezerlobaton/escrevendo-as-classes-de-um-jogo.git",
+  "author": "Eliezer Lobaton <eliezerlobaton39@gmail.com>",
+  "license": "MIT"
+}
